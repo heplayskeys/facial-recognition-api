@@ -2,7 +2,6 @@ const express = require("express");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
 const app = express();
-
 const register = require("./controllers/register");
 const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
@@ -23,7 +22,6 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
-// app.use(express.static(`${__dirname}/public`));
 
 // Landing Home
 app.get("/", (req, res) => {
